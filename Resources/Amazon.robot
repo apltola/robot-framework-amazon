@@ -3,6 +3,8 @@ Resource  ./PO/LandingPage.robot
 Resource  ./PO/TopNav.robot
 Resource  ./PO/SearchResults.robot
 Resource  ./PO/Product.robot
+Resource  ./PO/Cartti.robot
+Resource  ./PO/SignIn.robot
 Library  SeleniumLibrary
 
 *** Keywords ***
@@ -17,9 +19,9 @@ Select product from search results
     Product.Verify page loaded
 
 Add product to Cart
-    click button  id=add-to-cart-button
-    wait until page contains  Proceed to checkout (1 item)
+    Product.Add to cart
+    Cartti.Verify product added
 
 Begin checkout
-    click link  Proceed to checkout (1 item)
-    page should contain button  id=signInSubmit
+    Cartti.Proceed to checkout
+    SignIn.Verify page loaded
