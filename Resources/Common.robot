@@ -1,13 +1,14 @@
 *** Settings ***
 Library  SeleniumLibrary
 
+*** Variables ***
 
 *** Keywords ***
 Insert testing data
     Log  testing data being inserted...
 
 Begin web test
-    Open Browser  about:blank  chrome
+    Open Browser  about:blank  ${BROWSER}
 
 End web test
     Close Browser

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.1 (Python 3.7.3 on win32)" generated="20190509 12:53:54.370" rpa="false">
+<robot generator="Robot 3.1.1 (Python 3.7.3 on win32)" generated="20190509 13:40:57.976" rpa="false">
 <suite id="s1" name="Amazon" source="C:\Users\aleksi.peltola\Dev\robot-scripts\amazon\tests\Amazon.robot">
 <kw name="Insert testing data" library="Common" type="setup">
 <kw name="Log" library="BuiltIn">
@@ -7,10 +7,10 @@
 <arguments>
 <arg>testing data being inserted...</arg>
 </arguments>
-<msg timestamp="20190509 12:53:56.148" level="INFO">testing data being inserted...</msg>
-<status status="PASS" starttime="20190509 12:53:56.148" endtime="20190509 12:53:56.148"></status>
+<msg timestamp="20190509 13:40:59.461" level="INFO">testing data being inserted...</msg>
+<status status="PASS" starttime="20190509 13:40:59.461" endtime="20190509 13:40:59.461"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:53:56.148" endtime="20190509 12:53:56.149"></status>
+<status status="PASS" starttime="20190509 13:40:59.461" endtime="20190509 13:40:59.461"></status>
 </kw>
 <test id="s1-t1" name="User must sign in to check out">
 <kw name="Begin web test" library="Common" type="setup">
@@ -18,24 +18,24 @@
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>about:blank</arg>
-<arg>chrome</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20190509 12:53:56.150" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20190509 12:53:56.150" endtime="20190509 12:53:58.936"></status>
+<msg timestamp="20190509 13:40:59.461" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190509 13:40:59.461" endtime="20190509 13:41:02.323"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:53:56.150" endtime="20190509 12:53:58.936"></status>
+<status status="PASS" starttime="20190509 13:40:59.461" endtime="20190509 13:41:02.323"></status>
 </kw>
 <kw name="Search for products" library="Amazon">
 <kw name="Load" library="LandingPage">
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
 <arguments>
-<arg>https://amazon.com</arg>
+<arg>${START_URL}</arg>
 </arguments>
-<msg timestamp="20190509 12:53:58.939" level="INFO">Opening url 'https://amazon.com'</msg>
-<status status="PASS" starttime="20190509 12:53:58.938" endtime="20190509 12:54:01.170"></status>
+<msg timestamp="20190509 13:41:02.326" level="INFO">Opening url 'https://amazon.com'</msg>
+<status status="PASS" starttime="20190509 13:41:02.325" endtime="20190509 13:41:04.767"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:53:58.938" endtime="20190509 12:54:01.170"></status>
+<status status="PASS" starttime="20190509 13:41:02.325" endtime="20190509 13:41:04.768"></status>
 </kw>
 <kw name="Verify page loaded" library="LandingPage">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -43,9 +43,9 @@
 <arguments>
 <arg>Your Amazon.com</arg>
 </arguments>
-<status status="PASS" starttime="20190509 12:54:01.171" endtime="20190509 12:54:01.219"></status>
+<status status="PASS" starttime="20190509 13:41:04.769" endtime="20190509 13:41:04.850"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:01.171" endtime="20190509 12:54:01.219"></status>
+<status status="PASS" starttime="20190509 13:41:04.769" endtime="20190509 13:41:04.850"></status>
 </kw>
 <kw name="Search for products" library="TopNav">
 <kw name="Enter search term" library="TopNav">
@@ -53,12 +53,12 @@
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
 <arg>id=twotabsearchtextbox</arg>
-<arg>Ferrari 458</arg>
+<arg>${SEARCH_TERM}</arg>
 </arguments>
-<msg timestamp="20190509 12:54:01.221" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20190509 12:54:01.220" endtime="20190509 12:54:02.497"></status>
+<msg timestamp="20190509 13:41:04.851" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20190509 13:41:04.851" endtime="20190509 13:41:05.866"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:01.220" endtime="20190509 12:54:02.498"></status>
+<status status="PASS" starttime="20190509 13:41:04.851" endtime="20190509 13:41:05.867"></status>
 </kw>
 <kw name="Submit search" library="TopNav">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -66,22 +66,22 @@
 <arguments>
 <arg>xpath://div[@class='nav-search-submit nav-sprite']//input[@type='submit']</arg>
 </arguments>
-<msg timestamp="20190509 12:54:02.499" level="INFO">Clicking button 'xpath://div[@class='nav-search-submit nav-sprite']//input[@type='submit']'.</msg>
-<status status="PASS" starttime="20190509 12:54:02.499" endtime="20190509 12:54:04.647"></status>
+<msg timestamp="20190509 13:41:05.868" level="INFO">Clicking button 'xpath://div[@class='nav-search-submit nav-sprite']//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20190509 13:41:05.868" endtime="20190509 13:41:07.995"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:02.498" endtime="20190509 12:54:04.647"></status>
+<status status="PASS" starttime="20190509 13:41:05.867" endtime="20190509 13:41:07.995"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:01.220" endtime="20190509 12:54:04.647"></status>
+<status status="PASS" starttime="20190509 13:41:04.850" endtime="20190509 13:41:07.995"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20190509 12:54:06.648" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20190509 12:54:04.648" endtime="20190509 12:54:06.648"></status>
+<msg timestamp="20190509 13:41:10.008" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190509 13:41:07.996" endtime="20190509 13:41:10.008"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:53:58.937" endtime="20190509 12:54:06.648"></status>
+<status status="PASS" starttime="20190509 13:41:02.324" endtime="20190509 13:41:10.008"></status>
 </kw>
 <kw name="Select product from search results" library="Amazon">
 <kw name="Click product link" library="SearchResults">
@@ -90,10 +90,10 @@
 <arguments>
 <arg>xpath://div[@data-cel-widget='search_result_0']//span[@class='rush-component']/a</arg>
 </arguments>
-<msg timestamp="20190509 12:54:06.649" level="INFO">Clicking link 'xpath://div[@data-cel-widget='search_result_0']//span[@class='rush-component']/a'.</msg>
-<status status="PASS" starttime="20190509 12:54:06.649" endtime="20190509 12:54:09.370"></status>
+<msg timestamp="20190509 13:41:10.008" level="INFO">Clicking link 'xpath://div[@data-cel-widget='search_result_0']//span[@class='rush-component']/a'.</msg>
+<status status="PASS" starttime="20190509 13:41:10.008" endtime="20190509 13:41:13.460"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:06.649" endtime="20190509 12:54:09.370"></status>
+<status status="PASS" starttime="20190509 13:41:10.008" endtime="20190509 13:41:13.460"></status>
 </kw>
 <kw name="Verify page loaded" library="Product">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -101,11 +101,11 @@
 <arguments>
 <arg>Compare with similar items</arg>
 </arguments>
-<status status="PASS" starttime="20190509 12:54:09.371" endtime="20190509 12:54:09.412"></status>
+<status status="PASS" starttime="20190509 13:41:13.461" endtime="20190509 13:41:13.525"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:09.371" endtime="20190509 12:54:09.412"></status>
+<status status="PASS" starttime="20190509 13:41:13.460" endtime="20190509 13:41:13.525"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:06.648" endtime="20190509 12:54:09.412"></status>
+<status status="PASS" starttime="20190509 13:41:10.008" endtime="20190509 13:41:13.526"></status>
 </kw>
 <kw name="Add product to Cart" library="Amazon">
 <kw name="Add to cart" library="Product">
@@ -114,10 +114,10 @@
 <arguments>
 <arg>id=add-to-cart-button</arg>
 </arguments>
-<msg timestamp="20190509 12:54:09.413" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
-<status status="PASS" starttime="20190509 12:54:09.413" endtime="20190509 12:54:10.564"></status>
+<msg timestamp="20190509 13:41:13.527" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" starttime="20190509 13:41:13.527" endtime="20190509 13:41:15.021"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:09.413" endtime="20190509 12:54:10.565"></status>
+<status status="PASS" starttime="20190509 13:41:13.527" endtime="20190509 13:41:15.022"></status>
 </kw>
 <kw name="Verify product added" library="Cartti">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -125,11 +125,11 @@
 <arguments>
 <arg>Proceed to checkout (1 item)</arg>
 </arguments>
-<status status="PASS" starttime="20190509 12:54:10.567" endtime="20190509 12:54:10.597"></status>
+<status status="PASS" starttime="20190509 13:41:15.022" endtime="20190509 13:41:15.059"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:10.566" endtime="20190509 12:54:10.598"></status>
+<status status="PASS" starttime="20190509 13:41:15.022" endtime="20190509 13:41:15.059"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:09.413" endtime="20190509 12:54:10.598"></status>
+<status status="PASS" starttime="20190509 13:41:13.526" endtime="20190509 13:41:15.059"></status>
 </kw>
 <kw name="Begin checkout" library="Amazon">
 <kw name="Proceed to checkout" library="Cartti">
@@ -138,10 +138,10 @@
 <arguments>
 <arg>Proceed to checkout (1 item)</arg>
 </arguments>
-<msg timestamp="20190509 12:54:10.600" level="INFO">Clicking link 'Proceed to checkout (1 item)'.</msg>
-<status status="PASS" starttime="20190509 12:54:10.599" endtime="20190509 12:54:11.808"></status>
+<msg timestamp="20190509 13:41:15.061" level="INFO">Clicking link 'Proceed to checkout (1 item)'.</msg>
+<status status="PASS" starttime="20190509 13:41:15.061" endtime="20190509 13:41:15.181"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:10.599" endtime="20190509 12:54:11.808"></status>
+<status status="PASS" starttime="20190509 13:41:15.060" endtime="20190509 13:41:15.182"></status>
 </kw>
 <kw name="Verify page loaded" library="SignIn">
 <kw name="Page Should Contain Button" library="SeleniumLibrary">
@@ -149,25 +149,30 @@
 <arguments>
 <arg>id=signInSubmit</arg>
 </arguments>
-<msg timestamp="20190509 12:54:11.834" level="INFO">Current page contains input 'id=signInSubmit'.</msg>
-<status status="PASS" starttime="20190509 12:54:11.808" endtime="20190509 12:54:11.834"></status>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190509 13:41:16.140" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190509 13:41:15.298" endtime="20190509 13:41:16.140"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:11.808" endtime="20190509 12:54:11.834"></status>
+<msg timestamp="20190509 13:41:16.203" level="FAIL">Page should have contained button 'id=signInSubmit' but did not.</msg>
+<status status="FAIL" starttime="20190509 13:41:15.182" endtime="20190509 13:41:16.203"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:10.599" endtime="20190509 12:54:11.834"></status>
+<status status="FAIL" starttime="20190509 13:41:15.182" endtime="20190509 13:41:16.203"></status>
+</kw>
+<status status="FAIL" starttime="20190509 13:41:15.060" endtime="20190509 13:41:16.204"></status>
 </kw>
 <kw name="End web test" library="Common" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20190509 12:54:11.835" endtime="20190509 12:54:14.470"></status>
+<status status="PASS" starttime="20190509 13:41:16.205" endtime="20190509 13:41:18.712"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:11.835" endtime="20190509 12:54:14.471"></status>
+<status status="PASS" starttime="20190509 13:41:16.205" endtime="20190509 13:41:18.712"></status>
 </kw>
 <doc>user must sign in to check out</doc>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" starttime="20190509 12:53:56.149" endtime="20190509 12:54:14.471" critical="yes"></status>
+<status status="FAIL" starttime="20190509 13:40:59.461" endtime="20190509 13:41:18.712" critical="yes">Page should have contained button 'id=signInSubmit' but did not.</status>
 </test>
 <kw name="Cleanup testing data" library="Common" type="teardown">
 <kw name="Log" library="BuiltIn">
@@ -175,24 +180,24 @@
 <arguments>
 <arg>testing data being cleaned up...</arg>
 </arguments>
-<msg timestamp="20190509 12:54:14.473" level="INFO">testing data being cleaned up...</msg>
-<status status="PASS" starttime="20190509 12:54:14.473" endtime="20190509 12:54:14.474"></status>
+<msg timestamp="20190509 13:41:18.712" level="INFO">testing data being cleaned up...</msg>
+<status status="PASS" starttime="20190509 13:41:18.712" endtime="20190509 13:41:18.712"></status>
 </kw>
-<status status="PASS" starttime="20190509 12:54:14.473" endtime="20190509 12:54:14.474"></status>
+<status status="PASS" starttime="20190509 13:41:18.712" endtime="20190509 13:41:18.712"></status>
 </kw>
 <doc>Some robot testing amazon</doc>
-<status status="PASS" starttime="20190509 12:53:54.370" endtime="20190509 12:54:14.474"></status>
+<status status="FAIL" starttime="20190509 13:40:57.976" endtime="20190509 13:41:18.712"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0">Smoke</stat>
+<stat pass="0" fail="1">Smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Amazon">Amazon</stat>
+<stat pass="0" fail="1" id="s1" name="Amazon">Amazon</stat>
 </suite>
 </statistics>
 <errors>

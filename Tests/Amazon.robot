@@ -8,6 +8,9 @@ Test Teardown  Common.End web test
 Suite Teardown  Cleanup testing data
 
 *** Variables ***
+${BROWSER} =  chrome
+${START_URL} =  https://amazon.com
+${SEARCH_TERM} =  Ferrari 458
 
 *** Test Cases ***
 User must sign in to check out
